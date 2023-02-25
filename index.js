@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+// // eslint-disable-next-line no-unused-vars
 const fenomenler = [
   {
     number: 1,
@@ -142,176 +142,201 @@ const fenomenler = [
   },
 ];
 
-/* Görev 1 (otomatik kontrol testi yapılmayacak):
-Aşağıdakileri konsolda gösterim (console.log) işlemi gerçekleştirerek, yukarıda verilen fenomenler dizisindeki verilere erişim alıştırması yapın:
+// /* Görev 1 (otomatik kontrol testi yapılmayacak):
+// Aşağıdakileri konsolda gösterim (console.log) işlemi gerçekleştirerek, yukarıda verilen fenomenler dizisindeki verilere erişim alıştırması yapın:
 
-(işlev yazmanıza gerek yok) */
+// (işlev yazmanıza gerek yok) */
 
-//(1) Dizideki ilk fenomen (0. dizin) profil (profile) adı
-console.log(fenomenler[0].profile);
+// //(1) Dizideki ilk fenomen (0. dizin) profil (profile) adı
+// console.log(fenomenler[0].profile);
 
-//(2) Dizideki üçüncü fenomenin (2. dizin) takipçi (followers) sayısı
-console.log(fenomenler[2].followers);
+// //(2) Dizideki üçüncü fenomenin (2. dizin) takipçi (followers) sayısı
+// console.log(fenomenler[2].followers);
 
-/*
-Görev 2 (otomatik kontrol testi yapılmayacak):
-(işlev yazmanıza gerek yok)
-Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.
-*/
+// /*
+// Görev 2 (otomatik kontrol testi yapılmayacak):
+// (işlev yazmanıza gerek yok)
+// Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.
+// */
 
-fenomenler[6].profile = "Justin Bieber";
-console.log(fenomenler[6].profile);
+// fenomenler[6].profile = "Justin Bieber";
+// console.log(fenomenler[6].profile);
 
-/*  Görev 3:
-Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
-1. İlk parametre olarak fenomenler dizisini alın,
-2. İkinci parametre de ise, dizide istenen feneomene ait indeksi gösteren bir sayıyı alın.
-3. `{indeks}. indekste bulunan fenomen: {profile}` şeklinde sonuç döndürün
+// /*  Görev 3:
+// Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
+// 1. İlk parametre olarak fenomenler dizisini alın,
+// 2. İkinci parametre de ise, dizide istenen feneomene ait indeksi gösteren bir sayıyı alın.
+// 3. `{indeks}. indekste bulunan fenomen: {profile}` şeklinde sonuç döndürün
 
-NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
-ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
+// NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
+// ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
 
-function indekseGoreFenomen(fenomenArray, index) {
-  return `${index}. indekste bulunan fenomen: ${fenomenArray[index].profile}`;
-}
-console.log(indekseGoreFenomen(fenomenler, 6));
+// function indekseGoreFenomen(fenomenArray, index) {
+//   return `${index}. indekste bulunan fenomen: ${fenomenArray[index].profile}`;
+// }
+// console.log(indekseGoreFenomen(fenomenler, 6));
 
-/*  Görev 4:
-Aşağıdakileri yapmak için profilListesi'ni kullanın:
-1. fenomen dizisini bir parametreden argüman olarak alın
-2. Parametre dizisini kopyalayarak yeni bir dizi oluşturun
-3. Yeni dizinin üzerinde dolaşın ve dizinin her bir indeksinde yalnızca fenomenin adına eşit olacak şekilde güncelleyin
-🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
-*/
+// /*  Görev 4:
+// Aşağıdakileri yapmak için profilListesi'ni kullanın:
+// 1. fenomen dizisini bir parametreden argüman olarak alın
+// 2. Parametre dizisini kopyalayarak yeni bir dizi oluşturun
+// 3. Yeni dizinin üzerinde dolaşın ve dizinin her bir indeksinde yalnızca fenomenin adına eşit olacak şekilde güncelleyin
+// 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
+// */
 
-function profilListesi(fenomenArray) {
-  let fenomenNameArray = [];
-  for (let i = 0; i < fenomenArray.length; i++) {
-    fenomenNameArray.push(fenomenArray[i].profile);
-  }
-  return fenomenNameArray;
-}
-console.log(profilListesi(fenomenler));
+// function profilListesi(fenomenArray) {
+//   let fenomenNameArray = [];
+//   for (let i = 0; i < fenomenArray.length; i++) {
+//     fenomenNameArray.push(fenomenArray[i].profile);
+//   }
+//   return fenomenNameArray;
+// }
+// console.log(profilListesi(fenomenler));
 
-/* Görev 5:
-Aşağıdakileri yapmak için fenomenSil'i kullanın:
-1. ilk parametre olarak fenomenler dizisini alın
-2. ikinci parametre olarak istenen dizin(indeks) saysısını argüman olarak alın
-3. Parametre dizisinin bir kopyası olan yeni bir dizi oluşturun
-4. Kopyalanan diziden istenen indeksteki fenomeni çıkarın
-5. Ortaya çıkan diziyi döndürün
+// /* Görev 5:
+// Aşağıdakileri yapmak için fenomenSil'i kullanın:
+// 1. ilk parametre olarak fenomenler dizisini alın
+// 2. ikinci parametre olarak istenen dizin(indeks) saysısını argüman olarak alın
+// 3. Parametre dizisinin bir kopyası olan yeni bir dizi oluşturun
+// 4. Kopyalanan diziden istenen indeksteki fenomeni çıkarın
+// 5. Ortaya çıkan diziyi döndürün
 
-ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
-function fenomenSil(fenomenArray, index) {
-  let newFenomenlerArray = [...fenomenArray];
-  newFenomenlerArray.splice(index, 1);
-  return newFenomenlerArray;
-}
-console.log(fenomenSil(fenomenler, 0));
+// ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
+// function fenomenSil(fenomenArray, index) {
+//   let newFenomenlerArray = [...fenomenArray];
+//   newFenomenlerArray.splice(index, 1);
+//   return newFenomenlerArray;
+// }
+// console.log(fenomenSil(fenomenler, 0));
 
-/* Görev 6:
-Aşağıdakileri yapmak için fenomenEkle'i kullanın:
-1. ilk parametre olarak fenomenler dizisini alın
-2. İKİNCİ, ÜÇÜNCÜ, DÖRDÜNCÜ, BEŞİNCİ ve ALTINCI parametre olarak sırasıyla bir sırano (number), bir profil ismi (profile), takipçi sayısı (followers), gönderim sayısı  (posts) ve bir platform adı (platform) alın.
-3. fenomenler dizisini bir kopyasını oluşturun.
-4. Aşağıdaki formatta bir nesne oluşturun:
-  {
-    "number": 6,
-    "profile": "Workintech",
-    "followers": 10000000,
-    "posts": 2022,
-    "platform": "Instagram"
-  }
-5. Yeni oluşturulan nesneyi kopyalanan diziye ekleyin, ardından kopyalanan diziyi döndürün
+// /* Görev 6:
+// Aşağıdakileri yapmak için fenomenEkle'i kullanın:
+// 1. ilk parametre olarak fenomenler dizisini alın
+// 2. İKİNCİ, ÜÇÜNCÜ, DÖRDÜNCÜ, BEŞİNCİ ve ALTINCI parametre olarak sırasıyla bir sırano (number), bir profil ismi (profile), takipçi sayısı (followers), gönderim sayısı  (posts) ve bir platform adı (platform) alın.
+// 3. fenomenler dizisini bir kopyasını oluşturun.
+// 4. Aşağıdaki formatta bir nesne oluşturun:
+//   {
+//     "number": 6,
+//     "profile": "Workintech",
+//     "followers": 10000000,
+//     "posts": 2022,
+//     "platform": "Instagram"
+//   }
+// 5. Yeni oluşturulan nesneyi kopyalanan diziye ekleyin, ardından kopyalanan diziyi döndürün
 
-ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
+// ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
 
-function fenomenEkle(
-  array,
-  numberValue,
-  profileValue,
-  followersValue,
-  postsValue,
-  platformValue
-) {
-  let newArray = [...array];
-  newArray.push({
-    number: numberValue,
-    profile: profileValue,
-    followers: followersValue,
-    posts: postsValue,
-    platform: platformValue,
-  });
+// function fenomenEkle(
+//   array,
+//   numberValue,
+//   profileValue,
+//   followersValue,
+//   postsValue,
+//   platformValue
+// ) {
+//   let newArray = [...array];
+//   newArray.push({
+//     number: numberValue,
+//     profile: profileValue,
+//     followers: followersValue,
+//     posts: postsValue,
+//     platform: platformValue,
+//   });
 
-  return newArray;
-}
-console.log(
-  fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram")
-);
+//   return newArray;
+// }
+// console.log(
+//   fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram")
+// );
 
-/* Görev 7:
-Aşağıdakileri yapmak için enFenomenler'yi kullanın:
-1. ilk parametre olarak fenomenler dizisini alın
-2. Alınan diziden yüzmilyon'dan (100000000) fazla takipçisi olan fenomenlerin adlarını içeren bir dizi döndürün.
+// /* Görev 7:
+// Aşağıdakileri yapmak için enFenomenler'yi kullanın:
+// 1. ilk parametre olarak fenomenler dizisini alın
+// 2. Alınan diziden yüzmilyon'dan (100000000) fazla takipçisi olan fenomenlerin adlarını içeren bir dizi döndürün.
 
-ÖRNEK: enFenomenler(fenomenler) çağrıldığında sonuç olarak ["Instagram", "Cristiano Ronaldo", ... "Khabane lame"] dönemelidir
-*/
+// ÖRNEK: enFenomenler(fenomenler) çağrıldığında sonuç olarak ["Instagram", "Cristiano Ronaldo", ... "Khabane lame"] dönemelidir
+// */
 
-function enFenomenler(array) {
-  let newArray = [];
+// function enFenomenler(array) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].followers > 100000000) {
+//       newArray.push(array[i].profile);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(enFenomenler(fenomenler));
+
+// /* Görev 8:
+// Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
+// 1. ilk parametre olarak fenomenler dizisini alın
+// 2. ikinci parametre olarak fenomen profil adını (profile) alın
+// 3. Fenomenin gönderim(posts) sayısını döndürün
+
+// ÖRNEK: fenomenGonderimSayisi(fenomenler, 'Will Smith') çağrıldığında "136" dönmelidir
+// */
+
+// function fenomenGonderimSayisi(/*kod*/) {
+//   /*kod*/
+// }
+
+// /* Görev 9:
+// Aşağıdakileri yapmak için platformaGoreCokGonderiYapanFenomen'ni kullanın:
+// 1. ilk parametre olarak fenomenler dizisini alın
+// 2. ikinci parametre olarak platform adını alın
+// 3. Verilen platform da en çok gönderi yapan fenomen adını döndürün
+
+// Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
+
+// Örnek: platformaGoreCokGonderiYapanFenomen(fenomenler, 'TikTok') çağrıldığında "charli damelio" dönmelidir
+// */
+
+function platformaGoreCokGonderiYapanFenomen(array, platformName) {
+  //once verilen parametredeki platformlarla uyusan objeleri almak icin bos array olusturdum.
+  let usersWithGivenPlatform = [];
+  //byrda arrayde loop yapip diyorum ki her bir elemenin platformu parametredeki platforma esitse onu olusturdugum arraye at
   for (let i = 0; i < array.length; i++) {
-    if (array[i].followers > 100000000) {
-      newArray.push(array[i].profile);
+    if (array[i].platform === platformName) {
+      usersWithGivenPlatform.push(array[i]);
     }
   }
-  return newArray;
+  //burada referans alicagim ve sonraki loopta karsilastiracagim post sayisini en dusuk sayi aliyorum
+  let firstUsersPosts = Number.NEGATIVE_INFINITY;
+  //ismi self explanatory bence xd
+  let personWhoHasMostPosts;
+  //loop yaptim. Ben en cok post sayisina sahip objeyi bulmaya calisiyorum.
+  //o yuzden diyorum ki en dusuk sayi yani -infinityy al her bir elemandaki post sayisiyla karsilastir.
+  //eger karsilastirdigim i elemanin post sayisi firstUserPosts dan fazlaysa yeni firstUserPosts artik benim i elemanimda post sayisi.
+  //Boylelikle butun arrayi kontrol ediyorum.
+
+  for (let i = 0; i < usersWithGivenPlatform.length; i++) {
+    if (firstUsersPosts < usersWithGivenPlatform[i].posts) {
+      firstUsersPosts = usersWithGivenPlatform[i];
+      //Sonra da loop tamamlaninca da bunun adini aliyorum
+      personWhoHasMostPosts = usersWithGivenPlatform[i].profile;
+    }
+  }
+  return personWhoHasMostPosts;
 }
-console.log(enFenomenler(fenomenler));
+console.log(platformaGoreCokGonderiYapanFenomen(fenomenler, "TikTok"));
 
-/* Görev 8:
-Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
-1. ilk parametre olarak fenomenler dizisini alın
-2. ikinci parametre olarak fenomen profil adını (profile) alın
-3. Fenomenin gönderim(posts) sayısını döndürün
+// /* ***** GÖREVLERİN SONU ***** */
 
-ÖRNEK: fenomenGonderimSayisi(fenomenler, 'Will Smith') çağrıldığında "136" dönmelidir
-*/
-
-function fenomenGonderimSayisi(/*kod*/) {
-  /*kod*/
-}
-
-/* Görev 9:
-Aşağıdakileri yapmak için platformaGoreCokGonderiYapanFenomen'ni kullanın:
-1. ilk parametre olarak fenomenler dizisini alın
-2. ikinci parametre olarak platform adını alın
-3. Verilen platform da en çok gönderi yapan fenomen adını döndürün
-
-Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
-
-Örnek: platformaGoreCokGonderiYapanFenomen(fenomenler, 'TikTok') çağrıldığında "charli damelio" dönmelidir
-*/
-
-function platformaGoreCokGonderiYapanFenomen(/*kod*/) {
-  /*kod*/
-}
-
-/* ***** GÖREVLERİN SONU ***** */
-
-/*Bu satırdan sonra koda dokunmayın! */
-function sa() {
-  console.log("çalışıyor");
-  return "as";
-}
-sa();
-/*Bu satırdan sonra koda dokunmayın! */
-module.exports = {
-  sa,
-  indekseGoreFenomen,
-  profilListesi,
-  fenomenSil,
-  fenomenEkle,
-  enFenomenler,
-  fenomenGonderimSayisi,
-  platformaGoreCokGonderiYapanFenomen,
-};
+// /*Bu satırdan sonra koda dokunmayın! */
+// function sa() {
+//   console.log("çalışıyor");
+//   return "as";
+// }
+// sa();
+// /*Bu satırdan sonra koda dokunmayın! */
+// module.exports = {
+//   sa,
+//   indekseGoreFenomen,
+//   profilListesi,
+//   fenomenSil,
+//   fenomenEkle,
+//   enFenomenler,
+//   fenomenGonderimSayisi,
+//   platformaGoreCokGonderiYapanFenomen,
+// };
